@@ -1,40 +1,69 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex flex-wrap justify-between items-center">
-          <div className="w-full md:w-1/3 text-center md:text-left">
-            <h3 className="text-lg font-bold">BuildMaster</h3>
-            <p className="mt-2">Building dreams, one project at a time.</p>
+    <footer className="bg-slate-950 text-white pt-10 pb-16 bg-cover bg-center rounded-tr-[15px]">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row">
+          {/* BuildMaster Logo */}
+          <div className="md:w-1/3 mb-8 md:mb-0 pl-7">
+            <h2 className="text-4xl font-bold pl-10">BuildMaster</h2>
           </div>
-          <div className="w-full md:w-1/3 mt-4 md:mt-0">
-            <h4 className="text-lg font-bold mb-2">Quick Links</h4>
-            <ul className="flex flex-wrap justify-center md:justify-start">
-              <li><Link to="/" className="mr-4 hover:text-blue-300">Home</Link></li>
-              <li><Link to="/services" className="mr-4 hover:text-blue-300">Services</Link></li>
-              <li><Link to="/projects" className="mr-4 hover:text-blue-300">Projects</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-300">Contact Us</Link></li>
-            </ul>
-          </div>
-          <div className="w-full md:w-1/3 mt-4 md:mt-0 text-center md:text-right">
-            <h4 className="text-lg font-bold mb-2">Follow Us</h4>
-            <div className="flex justify-center md:justify-end space-x-4">
-              <a href="#" className="text-2xl hover:text-blue-300">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-2xl hover:text-blue-300">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-2xl hover:text-blue-300">
-                <i className="fab fa-linkedin"></i>
-              </a>
+
+          {/* Footer Content */}
+          <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pl-10">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul>
+                <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
+                <li><Link to="/services" className="hover:text-gray-300">Services</Link></li>
+                <li><Link to="/projects" className="hover:text-gray-300">Projects</Link></li>
+                <li><Link to="/contact" className="hover:text-gray-300">Contact Us</Link></li>
+              </ul>
+            </div>
+
+            {/* Terms and Security */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Terms and Security</h3>
+              <ul>
+                <li><Link to="/terms" className="hover:text-gray-300">Terms</Link></li>
+                <li><Link to="/privacy" className="hover:text-gray-300">Privacy</Link></li>
+              </ul>
+            </div>
+
+            {/* Contacts */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contacts</h3>
+              <p>Email: support@example.com</p>
+              <p>Phone: +1 (123) 456-7890</p>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Company</h3>
+              <ul>
+                <li><Link to="/about" className="hover:text-gray-300">About Us</Link></li>
+                <li><Link to="/blog" className="hover:text-gray-300">Blog</Link></li>
+                <li><Link to="/news" className="hover:text-gray-300">News</Link></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 text-center">
-          <p>&copy; 2024 BuildMaster. All rights reserved.</p>
+
+        {/* Social Media Icons */}
+        <div className="mt-8 flex justify-center space-x-6">
+          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
+            <FontAwesomeIcon icon={faTelegram} />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
         </div>
       </div>
     </footer>

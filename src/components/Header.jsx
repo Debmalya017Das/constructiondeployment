@@ -13,9 +13,7 @@ function Header() {
       <nav className="container mx-auto px-6 py-9">
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold">
-            <Link to="/" className='pl-10'>
-              BuildMAster
-            </Link>
+            <Link to="/" className="text-4xl font-bold pl-10">BuildMaster</Link>
           </div>
           <div className="lg:hidden relative">
             <button
@@ -28,7 +26,7 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            <div className={`${visible ? 'block' : 'hidden'} lg:hidden bg-slate-50 text-slate-950 shadow-lg rounded-lg absolute right-0 top-full z-50`}>
+            <div className={`${visible ? 'block' : 'hidden'} lg:hidden bg-slate-50 text-slate-950 shadow-lg rounded-lg absolute right-0 pr-6 pl-2 top-full z-50`}>
               <ul className="py-2 font-bold">
                 <NavItem to="/" label="Home" />
                 <NavItem to="/about" label="About" />
