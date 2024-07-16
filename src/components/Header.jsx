@@ -1,26 +1,66 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+function Header() {
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible(!visible);
+  };
+
   return (
-    <header className="bg-blue-600 text-white">
-      <nav className="container mx-auto px-6 py-3">
+    <div className="bg-black text-white shadow-xl relative z-50 w-full  ">
+      <nav className="container mx-auto px-6 py-9">
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold">
-            <Link to="/">BuildMaster</Link>
+            <Link to="/" className='pl-10'>
+              BuildMAster
+            </Link>
           </div>
-          <div className="hidden md:flex space-x-4">
-            <Link to="/" className="hover:text-blue-200">Home</Link>
-            <Link to="/about" className="hover:text-blue-200">About</Link>
-            <Link to="/services" className="hover:text-blue-200">Services</Link>
-            <Link to="/projects" className="hover:text-blue-200">Projects</Link>
-            <Link to="/blog" className="hover:text-blue-200">Blog</Link>
-            <Link to="/contact" className="hover:text-blue-200">Contact</Link>
-            {/* <Link to="/resources" className="hover:text-blue-200">Resources</Link> */}
+          <div className="lg:hidden relative">
+            <button
+              onClick={toggleVisibility}
+              className="text-white"
+              aria-controls="navbar-content"
+              aria-expanded={visible}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <div className={`${visible ? 'block' : 'hidden'} lg:hidden bg-slate-50 text-slate-950 shadow-lg rounded-lg absolute right-0 top-full z-50`}>
+              <ul className="py-2 font-bold">
+                <NavItem to="/" label="Home" />
+                <NavItem to="/about" label="About" />
+                <NavItem to="/services" label="Services" />
+                <NavItem to="/projects" label="Projects" />
+                <NavItem to="/blog" label="Blog" />
+                <NavItem to="/contact" label="Contact" />
+              </ul>
+            </div>
+          </div>
+          <div className="hidden lg:flex lg:space-x-2">
+            <NavItem to="/" label="Home" />
+            <NavItem to="/about" label="About" />
+            <NavItem to="/services" label="Services" />
+            <NavItem to="/projects" label="Projects" />
+            <NavItem to="/blog" label="Blog" />
+            <NavItem to="/contact" label="Contact" />
           </div>
         </div>
       </nav>
-    </header>
+    </div>
   );
-};
+}
+
+function NavItem({ to, label }) {
+  return (
+    <li className="list-none">
+      <Link to={to} className="block px-4 py-2 rounded hover:scale-105">
+        {label}
+      </Link>
+    </li>
+  );
+}
 
 export default Header;

@@ -1,6 +1,10 @@
+import Footer from "./Footer";
+import Header from "./Header";
+
 const AboutPage = () => {
   return (
     <div className="container mx-auto px-6 py-8">
+      <Header />
       <h1 className="text-4xl font-bold mb-8">About BuildMaster</h1>
       
       <section className="mb-12">
@@ -33,6 +37,7 @@ const AboutPage = () => {
           <li>LEED Platinum Certification for Sustainable Building</li>
         </ul>
       </section>
+      <Footer/>
     </div>
   );
 };
