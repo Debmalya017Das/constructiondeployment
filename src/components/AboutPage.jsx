@@ -39,7 +39,7 @@ const AboutPage = () => {
             <img 
               src="https://www.luxurysimplified.com/assets/img/bnn-01.jpg" 
               alt="" 
-              className="w-full h-auto rounded-lg shadow-lg transition-shadow duration-400"
+              className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
