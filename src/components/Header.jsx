@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Header() {
   const [visible, setVisible] = useState(false);
 
@@ -27,13 +28,13 @@ function Header() {
               </svg>
             </button>
             <div className={`${visible ? 'block' : 'hidden'} lg:hidden bg-slate-50 text-slate-950 shadow-lg rounded-lg absolute right-0 pr-6 pl-2 top-full z-50`}>
-              <ul className="py-2 font-bold">
+              <ul className=" font-bold py-2 ">
                 <NavItem to="/" label="Home" />
                 <NavItem to="/about" label="About" />
                 <NavItem to="/services" label="Services" />
                 <NavItem to="/projects" label="Projects" />
                 <NavItem to="/blog" label="Blog" />
-                <NavItem to="/contact" label="Contact" />
+                <a href="#contact" className='pr-8 pl-4 pt-2 hover:scale-105'>Contact </a>
               </ul>
             </div>
           </div>
@@ -43,7 +44,7 @@ function Header() {
             <NavItem to="/services" label="Services" />
             <NavItem to="/projects" label="Projects" />
             <NavItem to="/blog" label="Blog" />
-            <NavItem to="/contact" label="Contact" />
+            <a href="#contact" className="pt-2 hover:scale-105">Contact </a>
           </div>
         </div>
       </nav>

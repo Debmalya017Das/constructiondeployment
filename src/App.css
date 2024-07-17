@@ -22,3 +22,6 @@ body, html {
 .custom-slider .slick-dots li.slick-active button:before {
   color: white; /* Change the active dot color to white */
 }
+html {
+    scroll-behavior: smooth;
+}

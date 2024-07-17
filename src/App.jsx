@@ -4,7 +4,6 @@ import AboutPage from './components/AboutPage';
 import ServicesPage from './components/Services';
 import ProjectsPage from './components/Projects';
 import BlogPage from './components/Blog';
-import ContactPage from './components/Contact';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );

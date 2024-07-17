@@ -50,17 +50,24 @@ const HomePage = () => {
      {
       image: 'https://images.squarespace-cdn.com/content/v1/615b7de993287d2be50f610b/be89176d-9cf7-4f4c-bdc0-807a5aaa42f6/01a4cf54-d19a-4163-8dbc-30633e701e2b_rw_1200.jpg?format=1500w',
       title: 'PROPERTY MANAGEMENT',
-      subtitle: 'MSB Property Management LLC',
+      subtitle: 'BuilderMaster',
       description: 'Enjoy complete peace-of-mind with our year-round maintenance and property management services.',
       buttonText: 'services',
     },
     {
-      image: 'https://images.squarespace-cdn.com/content/v1/615b7de993287d2be50f610b/be89176d-9cf7-4f4c-bdc0-807a5aaa42f6/01a4cf54-d19a-4163-8dbc-30633e701e2b_rw_1200.jpg?format=1500w',
-      title: 'PROPERTY MANAGEMENT',
-      subtitle: 'MSB Property Management LLC',
+      image: 'https://images.squarespace-cdn.com/content/v1/615b7de993287d2be50f610b/54ca479c-a935-4e46-bad7-a242b71661be/Sammann+Photoshoot+Sep19-1.jpg?format=1500w',
+      title: 'CUSTOM HOMES',
+      subtitle: 'BuilderMaster',
       description: 'Enjoy complete peace-of-mind with our year-round maintenance and property management services.',
       buttonText: 'services',
     },
+    {
+      image: 'https://images.squarespace-cdn.com/content/v1/615b7de993287d2be50f610b/507c89b5-e6b6-4ae4-af16-146ccc420067/07-McDonald.jpg?format=1500w',
+      title: 'INTERIOR DESIGNS',
+      subtitle: 'BuilderMaster',
+      description: 'Enjoy complete peace-of-mind with our year-round maintenance and property management services.',
+      buttonText: 'services',
+    }
 
   ]
 
@@ -112,30 +119,47 @@ const HomePage = () => {
             <h1 className='font-montserrat text-4xl uppercase pt-1 mb-2 '>Projects</h1>
             <p className='font-montserrat font-medium  pt-12'>Over two decades of practice alongside the</p>
             <p className='font-montserrat font-medium '> creativity and drive of some of the world`s most talented designers</p>
-            <p className='font-montserrat font-medium pb-8'>and craftsman - it`s truly the best of every world. </p>
+            <p className='font-montserrat font-medium   pb-8'>and craftsman - it`s truly the best of every world. </p>
           </div>
-            <Slider {...settings}>
+            <Slider {...settings} className="custom-slider h-full">
               {projects.map((project, index) => (
-                <div key={index} className="relative">
-                  <div className="relative w-full h-[430px]" style={{left : '15%'}} >
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-2/5 h-full object-cover"  
-                    />
+                <div key={index} className="relative px-4 py-8 md:py-12 ">
+                  <div className="flex flex-col md:flex-row items-center justify-center md:items-start md:justify-center">
+                    <div className="w-full md:w-1/2 h-64 md:h-[430px] lg:mr-[30rem]">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover "
+                      />
                     </div>
-                    <div className="absolute top-1/2 right-8 transform -translate-y-1/2 bg-white p-10 w-1/3 shadow-lg" style={{ right: '20%' }}>
-                      <h2 className="text-2xl font-serif tracking-wide mb-4">{project.title}</h2>
-                      <h3 className="text-xl font-bold mb-2">{project.subtitle}</h3>
+                    <div className="w-full md:w-2/5 bg-white p-6 md:p-10 shadow-lg md:absolute md:top-1/2 md:right-4 md:transform md:-translate-y-1/2 md:z-10 lg:mr-[12rem] lg:w-1/3">
+                      <h2 className="text-xl md:text-2xl font-serif tracking-wide mb-4">{project.title}</h2>
+                      <h3 className="text-lg md:text-xl font-bold mb-2">{project.subtitle}</h3>
                       <p className="text-gray-600 mb-4">{project.description}</p>
-                      <button className="bg-gray-700 text-white px-4 py-2 rounded">
-                        {project.buttonText}
-                      </button>
+                      <Link to="/services">
+                        <button className="bg-slate-900 text-white px-4 py-2 rounded hover:scale-110 transition-transform">
+                          {project.buttonText}
+                        </button>
+                      </Link>
                     </div>
-                  
+                  </div>
                 </div>
               ))}
             </Slider>
+          </div>
+
+          {/* ending section  */}
+           <div  id="contact" className="flex flex-col items-center justify-center pt-20 pb-12 bg-amber-50 text-center font-['Helvetica','Arial',sans-serif]">
+              <h1 className="font-great-vibes text-4xl mb-4">Contact Us</h1>
+              <p className='font-montserrat font-medium py-4'>Contact us by the provided form and also feel free to explore our various projects.</p>
+                  <div className="md: w-full sm: w-full lg:w-1/2 px-5 ">
+                      <form className="flex flex-col">
+                          <input type="text" placeholder="Name" className="mb-4 p-2 border rounded font-montserrat bg-amber-50 shadow-md text-slate-900"  />
+                          <input type="email" placeholder="Email" className="mb-4 p-2 border rounded font-montserrat bg-amber-50 shadow-md" />
+                          <textarea placeholder="Message" className="mb-4 p-2 border rounded h-32 font-montserrat bg-amber-50 shadow-md"></textarea>
+                      </form>  
+                      <button type="submit" className="bg-slate-800 shadow-md text-white px-5 py-2 rounded hover:scale-110">Submit</button>                    
+              </div>
           </div>
 
         </div>
