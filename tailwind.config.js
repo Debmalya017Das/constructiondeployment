@@ -10,6 +10,7 @@ export default {
         'great-vibes': ['Great Vibes', 'cursive'],
         'montserrat': ['Montserrat', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
+        'script': ['SignatureScript', 'cursive'],
       },
     },
   },

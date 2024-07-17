@@ -99,7 +99,7 @@ const HomePage = () => {
           {/* Welcome section  */}
 
           <div className="flex flex-col items-center justify-center pt-20 pb-12 bg-amber-50 text-center font-['Helvetica','Arial',sans-serif]">
-            <h1 className="font-great-vibes text-5xl mb-4">welcome</h1>
+            <h1 className="font-great-vibes text-5xl mb-2">welcome</h1>
             <p className="font-montserrat text-lg uppercase pt-10 mb-2">Crafting Homes For</p>
             <h2 className="text-4xl font-serif tracking-widest uppercase py-5">Discerning Clients</h2>
             <h3 className="font-montserrat text-lg uppercase mb-4">Since 2000</h3>
