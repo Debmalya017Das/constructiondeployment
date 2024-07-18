@@ -154,9 +154,9 @@ const HomePage = () => {
               <p className='font-montserrat font-medium py-4'>Contact us by the provided form and also feel free to explore our various projects.</p>
                   <div className="md: w-full sm: w-full lg:w-1/2 px-5 ">
                       <form className="flex flex-col">
-                          <input type="text" placeholder="Name" className="mb-4 p-2 border rounded font-montserrat bg-amber-50 shadow-md text-slate-900"  />
-                          <input type="email" placeholder="Email" className="mb-4 p-2 border rounded font-montserrat bg-amber-50 shadow-md" />
-                          <textarea placeholder="Message" className="mb-4 p-2 border rounded h-32 font-montserrat bg-amber-50 shadow-md"></textarea>
+                          <input type="text" placeholder="Name" className="mb-4 p-2 border rounded font-montserrat bg-amber-50 shadow-md text-slate-900 border-solid border-1 border-slate-400"  />
+                          <input type="email" placeholder="Email" className="mb-4 p-2 border rounded font-montserrat bg-amber-50 shadow-md border-solid border-1 border-slate-400" />
+                          <textarea placeholder="Message" className="mb-4 p-2 border rounded h-32 font-montserrat bg-amber-50 shadow-md border-solid border-1 border-slate-400"></textarea>
                       </form>  
                       <button type="submit" className="bg-slate-800 shadow-md text-white px-5 py-2 rounded hover:scale-110">Submit</button>                    
               </div>
