@@ -44,7 +44,7 @@ function Header() {
             <NavItem to="/services" label="Services" />
             <NavItem to="/projects" label="Projects" />
             <NavItem to="/blog" label="Blog" />
-            <a href="#contact" className="pt-2 hover:scale-105">Contact </a>
+            <a href="/#contact" className="pt-2 hover:scale-105">Contact </a>
           </div>
         </div>
       </nav>

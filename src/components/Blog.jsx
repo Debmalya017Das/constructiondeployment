@@ -24,7 +24,7 @@ function Blog() {
             <h1 className="font-montserrat uppercase text-5xl mb-2 text-slate-900">BLOG</h1>
             <p className="font-montserrat text-lg text-slate-900 pt-5 pb-10 leading-relaxed">Trusted news and resources for builders.</p>        
         </div>
-        <div className="flex flex-col items-center justify-center px-24 ">
+        <div className="flex flex-col items-center justify-center lg:px-14 md:px-10 sm:px-5">
             <div className="container mx-auto px-8 py-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
               {posts.map((post, index) => (
