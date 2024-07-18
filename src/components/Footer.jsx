@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-white pt-10 pb-16 bg-cover bg-center rounded-tr-[15px]">
+    <footer className="bg-slate-950 text-white pt-10 pb-16 bg-cover bg-center rounded-t-[15px]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
           {/* BuildMaster Logo */}
