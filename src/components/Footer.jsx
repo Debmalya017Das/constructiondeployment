@@ -55,13 +55,13 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="mt-8 flex justify-center space-x-6">
-          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
+          <a href="" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
             <FontAwesomeIcon icon={faTelegram} />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
+          <a href="" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
+          <a href="" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-300">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </div>

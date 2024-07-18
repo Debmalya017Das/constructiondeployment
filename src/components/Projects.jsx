@@ -1,41 +1,45 @@
-const ProjectCard = ({ title, image, description, client }) => (
-  <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-    <img src={image} alt={title} className="w-full h-48 object-cover" />
-    <div className="p-6">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <p className="text-sm text-gray-500">Client: {client}</p>
-    </div>
-  </div>
-);
+import Header from './Header'
+import Footer from './Footer'
+import { useState } from 'react';
+import { houses } from './data/projects';
 
-const ProjectsPage = () => {
-  const projects = [
-    {
-      title: "Modern Office Complex",
-      image: "/path-to-office-complex-image.jpg",
-      description: "A state-of-the-art office building with sustainable features.",
-      client: "TechCorp Inc."
-    },
-    {
-      title: "Luxury Residential Tower",
-      image: "/path-to-residential-tower-image.jpg",
-      description: "High-end apartments with panoramic city views.",
-      client: "Urban Living Developers"
-    },
-    // Add more projects as needed
-  ];
+function Projects() {
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="container mx-auto px-6 py-8">
-      <h1 className="text-4xl font-bold mb-8">Our Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+    <>
+    <Header />
+    <div className="container mx-auto px-10 py-8 my-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        {houses.map((house, index) => (
+          <div 
+            key={house.name}
+            className="relative aspect-auto overflow-hidden cursor-pointer"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <img
+              src={house.image}
+              alt={house.name}
+              className={`w-full h-vsh object-cover transition-opacity duration-300 rounded ${
+                hoveredIndex === index ? 'opacity-full' : 'opacity-45'
+              }`}
+            />
+            <div 
+              className={`absolute inset-0 flex items-center justify-center text-white text-center p-4 transition-opacity duration-300 ${
+                hoveredIndex === index ? 'opacity-0' : 'opacity-100'
+              }`}
+            >
+              <h2 className="lg:text-3xl md:text-2xl sm:text-base font-montserrat text-black">{house.name}</h2>
+            </div>
+          </div>
         ))}
       </div>
     </div>
-  );
-};
+    <Footer />
+    </>
+  )
+}
 
-export default ProjectsPage;
+export default Projects
